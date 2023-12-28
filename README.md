@@ -7,6 +7,7 @@ Welcome to the College Canteen Food Ordering System! This web application allows
 - [Description]
 - [Technologies Used]
 - [Database]
+- [IDE]
 - [Usage]
 - [Contact]
 
@@ -19,12 +20,18 @@ We have come up with an idea of an online food booking system where users can co
 - HTML
 - CSS
 - Bootstrap
+- Js
 - SQL (Structured Query Language)
 - Java Servlet for database connection
 
 ## Database
 
 The application uses MySQL as the database system to store user information, menu items, and orders. Make sure to set up and configure your MySQL database with the provided SQL scripts.
+
+#### IDE
+
+The project is developed using NetBeans IDE. You can open the project in NetBeans to view and modify the source code.
+
 
 ## Usage
 Open your web browser and go to http://localhost:8080.
