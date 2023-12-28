@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <!-- FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+
+
+
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg fixed " style="margin-left: 7%; margin-right: 5%; height: 10%; width: 85%;">
+        <div class="max-w-6xl mx-auto ">
+            <div class="flex justify-between ">
+                <div class="flex space-x-7 ">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="# " class="flex items-center py-4 px-2 ">
+                            <img src="../img/logo1.png " alt="Logo " class="h-8 w-8 mr-2 ">
+                            <!-- <span class="font-semibold text-gray-500 text-lg ">Navigation</span> -->
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1 ">
+                        <a href="../index.html " class="py-4 px-4 text-gray-500 border-[#45A29E] font-semibold hover:text-[#45A29E] transition duration-300">Home</a>
+                        <a href="./menu.html " class="py-4 px-4 text-gray-500 font-semibold hover:text-[#45A29E] transition duration-300 ">Menu</a>
+                        <a href="./canteen.html" class="py-4 px-4 text-gray-500 font-semibold hover:text-[#45A29E] transition duration-300  ">Canteen</a>
+                        <a href="./contact.html" class="py-4 px-4 text-gray-500 font-semibold hover:text-[#45A29E] transition duration-300 ">contact</a>
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 flex-row-reverse ">
+                    <a href="./login.html " class="py-2 px-2 font-medium rounded bg-[#45A29E] text-white " style="width: 100px; ">Log In</a>
+                    <a href="./register.html " class="py-2 px-2 font-medium text-gray [#45A29E] rounded hover:bg-[#66FCF1]" style="width: 100px; ">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center ">
+                    <button class="outline-none mobile-menu-button ">
+						<svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+							x-show="!showMenu "
+							fill="none "
+							stroke-linecap="round "
+							stroke-linejoin="round "
+							stroke-width="2 "
+							viewBox="0 0 24 24 "
+							stroke="currentColor "
+						>
+							<path d="M4 6h16M4 12h16M4 18h16 " style="margin-left: 90%; "></path>
+						</svg>
+					</button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu ">
+            <ul class=" ">
+                <li class="active "><a href="index.html " class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold ">Home</a></li>
+                <li><a href="#services " class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Services</a></li>
+                <li><a href="#about " class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">About</a></li>
+                <li><a href="#contact " class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Contact Us</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button ");
+            const menu = document.querySelector(".mobile-menu ");
+
+            btn.addEventListener("click ", () => {
+                menu.classList.toggle("hidden ");
+            });
+        </script>
+    </nav>
+
+    <!--Navbar ends-->
+
+
+
+
+    <!-- component -->
+    <section style="margin-left: 9%; margin-right: 9%;">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        Sign in to your account
+                    </h1>
+                    <form class="space-y-4 md:space-y-6" action="/Javaproject/Loginserv" method="post">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="name@gmail.com" required="">
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required="">
+                        </div>
+
+<!--                        <div class="flex items-center justify-between">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" aria-describedby="remember" type="checkbox" class=" h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800">
+                                </div>
+                                <div class="ml-2 text-sm">
+                                    <label for="remember" class="text-gray-500 dark:text-gray-300" style="text-align: left;">Remember me</label>
+                                </div>
+                            </div>
+                        </div>-->
+                        <button type="submit" class="w-full text-[#0b0c10] bg-[#49c5b6] hover:bg-[#0b0c10] hover:text-[#49c5b6] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-primary-800">Sign in</button>
+                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            Don't have an account yet? <a href="register.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- footer -->
+
+    <footer class=" relative bg-[#e0eeee] pt-8 pb-6" style=" margin-top: 5%; margin-left: 9%; margin-right: 9%;">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                        Order anything from anywhere inside Lovely professional University.
+                    </h5>
+                    <div class="mt-6 lg:mb-0 mb-6">
+                        <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-instagram"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-youtube"></i>
+          </button>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">Our team</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">Menu</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">Canteen</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">UMS</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Lpu Live</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Placement Portal</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">OAS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-blueGray-300">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-blueGray-500 font-semibold py-1">
+                        Copyright <span id="get-current-year">2023</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank"> Only for project
+          <a href="https://www.creative-tim.com?ref=njs-profile" class="text-blueGray-500 hover:text-blueGray-800">Made by Abubakar</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer closed -->
+
+
+
+</body>
+
+</html>
